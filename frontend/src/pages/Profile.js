@@ -8,7 +8,7 @@ function Profile() {
 
   const fetchData = async () => {
     const token = localStorage.getItem("token");
-    if (token != undefined) {
+    if (token !== undefined) {
       try {
         const resp = await axios(
           "https://jwtapp-88nd.onrender.com/api/user/profile",
@@ -17,7 +17,7 @@ function Profile() {
           }
         );
         console.log(resp);
-        if (resp.status == 200) {
+        if (resp.status === 200) {
           setUser(resp.data);
         }
       } catch (error) {
@@ -31,7 +31,7 @@ function Profile() {
     }
   };
   useEffect(() => {
-    fetchData();
+    fetchData(); // eslint-disable-next-line
   }, []);
 
   return (

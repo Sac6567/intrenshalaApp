@@ -16,7 +16,7 @@ function Login() {
         user
       );
       //console.log(resp);
-      if (resp.status == 200) {
+      if (resp.status === 200) {
         // alert(resp.data.message);
         console.log(resp);
         toast.success(resp.data.message);

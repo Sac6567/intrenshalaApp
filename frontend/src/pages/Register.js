@@ -20,7 +20,7 @@ function Register() {
         user
       );
       //console.log(resp);
-      if (resp.status == 201) {
+      if (resp.status === 201) {
         // alert(resp.data.message);
         toast.success(resp.data.message);
         setUser({ name: "", email: "", username: "", password: "" });
