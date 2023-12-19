@@ -8,7 +8,7 @@ function Dashboard() {
 
     useEffect(()=>{
         if(localStorage.getItem('token')===undefined)
-            navigate('/login');
+            navigate('/login');// eslint-disable-next-line
     },[])
     return ( 
         <Row className='d-flex justify-content-center min-vh-100 align-items-center'>
